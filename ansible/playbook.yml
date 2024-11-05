@@ -1,0 +1,20 @@
+- name: ping servers
+  hosts: all
+  become: false
+  tasks:
+    - name: ping all servers
+      ping:
+
+- name: first_server running
+  hosts: first_server
+  become: true
+  gather_facts: false
+  tasks:
+    - server_1
+
+- name: second_server running
+  hosts: second_server
+  become: true
+  gather_facts: false
+  tasks:
+    - sever_2
