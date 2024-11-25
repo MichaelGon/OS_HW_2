@@ -9,13 +9,6 @@ services:
       local_network:
         ipv4_address: 172.20.0.2
 
-  second_server:
-    build:
-      context: ./app
-    networks:
-      local_network:
-        ipv4_address: 172.20.0.3
-
   ansible:
     build:
       context: ./ansible
